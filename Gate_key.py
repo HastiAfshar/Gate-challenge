@@ -15,11 +15,18 @@ for _ in range(7):
         print("you won")
         break
     else:
-    
-        if secret > x :
-                print("the number is larger")
+        len= abs(x - secret)
+
+        if len < 10 :
+            print("You got relly close, just think a little bit") 
+        elif len < 50 :
+            print("You got close , keep going")
+        elif len < 100 :
+            print("Your're a bit far , come close")
         else:
-                print("the  number is smaller")
+            print("You're too far,you're on the wrong path")
+    
+        
 
 else:
      print(f"you lost number is {secret}")
