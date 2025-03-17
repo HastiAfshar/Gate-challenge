@@ -1,11 +1,16 @@
 from random import randint
+from rich.console import Console
+
+console=Console()
+
+console.print("Are you ready for an adventure?" , style="blue1")
 
 secret = randint(1,1000)
 
 
 
 for _ in range(7):
-    x = int(input("enter number: "))
+    x = int(input("enter number: " ))
     if x == secret:
         print("you won")
         break
@@ -17,4 +22,4 @@ for _ in range(7):
                 print("the  number is smaller")
 
 else:
-     print(f"you lost , number is {secret}")
+     print(f"you lost number is {secret}")
