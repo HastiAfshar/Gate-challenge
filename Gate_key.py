@@ -11,10 +11,10 @@ for _ in range(7):
         break
     else:
     
-        if x > secret:
-                print("the number is large")
+        if secret > x :
+                print("the number is larger")
         else:
                 print("the  number is smaller")
 
 else:
-     print("you lost")
+     print(f"you lost , number is {secret}")
