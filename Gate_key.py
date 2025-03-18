@@ -3,30 +3,34 @@ from rich.console import Console
 
 console=Console()
 
-console.print("Are you ready for an adventure?" , style="blue1")
+console.print("Are you ready for an adventure?You must guess the secret key to the gate(Yes or No)" , style="blue1")
 
 secret = randint(1,1000)
 
 
 
-for _ in range(7):
-    x = int(input("enter number: " ))
-    if x == secret:
-        print("you won")
+for _ in range(12):
+    key = int(input("Enter the secret key to the gate to enter: " ))
+    if key == secret:
+        print("You won! Congratulations,you guessed the secret key")
         break
     else:
-        len= abs(x - secret)
+        len= abs(key - secret)
 
-        if len < 10 :
-            print("You got relly close, just think a little bit") 
-        elif len < 50 :
-            print("You got close , keep going")
-        elif len < 100 :
-            print("Your're a bit far , come close")
+        if len < 20 :
+            print("BOOOOM!You're just inches away! One guess and you got it") 
+        elif 20 < len < 50 :
+            print("just one step away from the right number!")
+        elif  50 <= len < 80 :
+            print("the number is near,focus!")
+        elif 80 <= len < 120 :
+            print("Hmm...You're getting there!fine-tune your guesses")
+        elif 120 <= len < 150 :
+            print("still a bit off! But don't worry , change your path")
         else:
-            print("You're too far,you're on the wrong path")
+            print("Turn around,the number is far away")
     
         
 
 else:
-     print(f"you lost number is {secret}")
+     print(f"you lost!the secret key was {secret}.")
