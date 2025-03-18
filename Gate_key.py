@@ -1,10 +1,16 @@
 from random import randint
 from rich.console import Console
+import time
 
 
 console=Console()
 
-question=console.input("[green_yellow]Are you ready for an adventure?😻🤔You must guess the secret key to the gate(yes or no) [/green_yellow]")
+text="Are you ready for an adventure?you must guess the secret key to the gate(yes or no):"
+for char in text:
+    console.print(char,style="green_yellow" , end="")
+    time.sleep(0.05)
+question = console.input()    
+
 
 if question == "yes" :
     console.print("\n Great! Let the adventure begin.... \n" , style="orchid")
@@ -15,13 +21,15 @@ else:
 secret = randint(1,100)
 
 
-
-for _ in range(12):
+for _ in range(10):
     
     key = int(console.input(" [blue1]Enter the secret key to the gate to enter:🏰🪄(Guess a number (1 to 100)) [/blue1]" ))
     
     if key == secret:
-        console.print("\nYou won! Congratulations,you guessed the secret key 🏆🌻\n" , style ="gold1")
+        text = "\nYou won! Congratulations,you guessed the secret key 🏆🌻\n"
+        for char in text:
+            console.print(char,style="gold1" , end="")
+            time.sleep(0.05)
         break
    
     else:
@@ -48,4 +56,8 @@ for _ in range(12):
         
 
 else:
-     console.print(f"\nyou lost!the secret key was {secret}💔.\n" , style ="red1")
+    text = f"You lost! the secret key was {secret}.\n"
+
+    for char in text:
+        console.print(char,style = "red1" , end="")
+        time.sleep(0.05)
