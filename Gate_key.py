@@ -5,7 +5,7 @@ import time
 
 console=Console()
 
-text="Are you ready for an adventure?you must guess the secret key to the gate(yes or no):"
+text="Are you ready for an adventure?😻🤔 you must guess the secret key to the gate(yes or no):"
 for char in text:
     console.print(char,style="green_yellow" , end="")
     time.sleep(0.05)
@@ -56,7 +56,7 @@ for _ in range(10):
         
 
 else:
-    text = f"You lost! the secret key was {secret}.\n"
+    text = f"You lost! the secret key was {secret}💔.\n"
 
     for char in text:
         console.print(char,style = "red1" , end="")
