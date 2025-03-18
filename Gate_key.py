@@ -3,15 +3,21 @@ from rich.console import Console
 
 console=Console()
 
-console.print("Are you ready for an adventure?You must guess the secret key to the gate(Yes or No)" , style="green_yellow")
+question=console.input("[green_yellow]Are you ready for an adventure?You must guess the secret key to the gate(yes or no) [/green_yellow]")
 
-secret = randint(1,1000)
+if question == "yes" :
+    console.print("Great! Let the adventure begin...." , style="orchid")
+else:
+    console.print("You just missed out on an exciting journey!" , style="bright_magenta")
+    exit()
+
+secret = randint(1,200)
 
 
 
 for _ in range(12):
     
-    key = int(console.input("[blue1]Enter the secret key to the gate to enter: [/blue1]" ))
+    key = int(console.input("[blue1]Enter the secret key to the gate to enter:(Guess a number (1 to 200)) [/blue1]" ))
     
     if key == secret:
         console.print("You won! Congratulations,you guessed the secret key" , style ="gold1")
