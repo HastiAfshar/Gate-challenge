@@ -61,3 +61,23 @@ else:
     for char in text:
         console.print(char,style = "red1" , end="")
         time.sleep(0.05)
+
+
+text="\nDid you enjoy the adventure? Choose one:great / good / bad \n"
+
+for char in text:
+    console.print(char,style="green_yellow" , end="")
+    time.sleep(0.05)
+question2=console.input()
+
+
+if question2 == "great":
+    console.print("\nWow!you're a true adventurer\n" , style="green3")
+
+elif question2 == "good":
+    console.print("\nNice!glad you have fun\n" , style="cyan2")
+
+else:
+    console.print("\nOh no!Next time,you'll have a enjoy!\n" , style="cyan1")
+
+
