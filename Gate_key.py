@@ -24,6 +24,10 @@ secret = randint(1,100)
 for _ in range(10):
     
     key = int(console.input(" [blue1]Enter the secret key to the gate to enter:🏰🪄(Guess a number (1 to 100)) [/blue1]" ))
+
+    if key < 1 or key > 100:
+        console.print("\n Please enter a number between 1 and 100! \n" , style="dark_orange")
+        exit()
     
     if key == secret:
         text = "\nYou won! Congratulations,you guessed the secret key 🏆🌻\n"
