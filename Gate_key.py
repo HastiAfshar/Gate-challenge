@@ -18,16 +18,16 @@ else:
     console.print("\n You just missed out on an exciting journey! \n" , style="bright_magenta")
     exit()
 
-secret = randint(1,100)
+secret = randint(1,101)
 
 
-for _ in range(10):
+for _ in range(11):
     
     key = int(console.input(" [blue1]Enter the secret key to the gate to enter:🏰🪄(Guess a number (1 to 100)) [/blue1]" ))
 
     if key < 1 or key > 100:
         console.print("\n Please enter a number between 1 and 100! \n" , style="dark_orange")
-        exit()
+        continue
     
     if key == secret:
         text = "\nYou won! Congratulations,you guessed the secret key 🏆🌻\n"
