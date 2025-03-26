@@ -7,7 +7,7 @@ console=Console()
 
 text="Are you ready for an adventure?😻🤔 you must guess the secret key to the gate(yes or no):"
 for char in text:
-    console.print(char,style="green_yellow" , end="")
+    console.print(char,style="green_yellow" , end="" )
     time.sleep(0.05)
 question = console.input()    
 
